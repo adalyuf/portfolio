@@ -1,0 +1,895 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Alex Daly - Product Leader & Analytics Expert</title>
+    <meta name="description" content="Alex Daly - Product Leader & Analytics Expert Portfolio">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+            line-height: 1.6;
+            color: #1e293b;
+        }
+        
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 1.5rem;
+        }
+        
+        /* Hero Section */
+        .hero {
+            background: linear-gradient(135deg, #f8fafc 0%, #e0f2fe 50%, #e0e7ff 100%);
+            position: relative;
+            overflow: hidden;
+        }
+        
+        .hero::before {
+            content: '';
+            position: absolute;
+            inset: 0;
+            background: linear-gradient(to right, rgba(37, 99, 235, 0.1), rgba(67, 56, 202, 0.1));
+        }
+        
+        .hero-content {
+            position: relative;
+            text-align: center;
+            padding: 6rem 0;
+        }
+        
+        .hero h1 {
+            font-size: 3rem;
+            font-weight: 700;
+            color: #0f172a;
+            margin-bottom: 1rem;
+            letter-spacing: -0.025em;
+        }
+        
+        .hero .subtitle {
+            font-size: 1.5rem;
+            font-weight: 500;
+            color: #475569;
+            margin-bottom: 0.5rem;
+        }
+        
+        .location {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 0.5rem;
+            color: #64748b;
+            margin-bottom: 2rem;
+        }
+        
+        .badges {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: 0.75rem;
+            margin-bottom: 2rem;
+        }
+        
+        .badge {
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+            background: #f1f5f9;
+            color: #475569;
+            padding: 0.5rem 1rem;
+            border-radius: 9999px;
+            font-size: 0.875rem;
+            font-weight: 500;
+        }
+        
+        .hero-description {
+            font-size: 1.125rem;
+            color: #475569;
+            max-width: 48rem;
+            margin: 0 auto 2rem;
+            line-height: 1.75;
+        }
+        
+        .hero-buttons {
+            display: flex;
+            justify-content: center;
+            gap: 1rem;
+            flex-wrap: wrap;
+        }
+        
+        .btn {
+            display: inline-flex;
+            align-items: center;
+            gap: 0.5rem;
+            padding: 0.75rem 1.5rem;
+            border-radius: 0.375rem;
+            font-weight: 500;
+            text-decoration: none;
+            transition: all 0.2s;
+            cursor: pointer;
+            border: none;
+            font-size: 1rem;
+        }
+        
+        .btn-primary {
+            background: #2563eb;
+            color: white;
+        }
+        
+        .btn-primary:hover {
+            background: #1d4ed8;
+        }
+        
+        .btn-outline {
+            background: transparent;
+            color: #374151;
+            border: 1px solid #d1d5db;
+        }
+        
+        .btn-outline:hover {
+            background: #f9fafb;
+        }
+        
+        /* Experience Section */
+        .experience {
+            background: white;
+            padding: 5rem 0;
+        }
+        
+        .section-header {
+            text-align: center;
+            margin-bottom: 4rem;
+        }
+        
+        .section-title {
+            font-size: 1.875rem;
+            font-weight: 700;
+            color: #0f172a;
+            margin-bottom: 1rem;
+        }
+        
+        .section-description {
+            font-size: 1.125rem;
+            color: #475569;
+        }
+        
+        .experience-list {
+            display: flex;
+            flex-direction: column;
+            gap: 2rem;
+        }
+        
+        .experience-card {
+            background: white;
+            border: 1px solid #e2e8f0;
+            border-left: 4px solid #2563eb;
+            border-radius: 0.5rem;
+            padding: 1.5rem;
+            box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+            transition: box-shadow 0.2s;
+        }
+        
+        .experience-card:hover {
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+        }
+        
+        .experience-header {
+            display: flex;
+            flex-direction: column;
+            gap: 1rem;
+            margin-bottom: 1rem;
+        }
+        
+        .experience-title {
+            font-size: 1.25rem;
+            font-weight: 600;
+            color: #0f172a;
+        }
+        
+        .experience-meta {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 1rem;
+            color: #475569;
+        }
+        
+        .experience-meta > div {
+            display: flex;
+            align-items: center;
+            gap: 0.25rem;
+        }
+        
+        .experience-meta .company {
+            font-weight: 500;
+        }
+        
+        .experience-type {
+            display: inline-block;
+            background: #2563eb;
+            color: white;
+            padding: 0.25rem 0.75rem;
+            border-radius: 9999px;
+            font-size: 0.75rem;
+            font-weight: 500;
+        }
+        
+        .experience-type.secondary {
+            background: #f1f5f9;
+            color: #475569;
+        }
+        
+        .achievements {
+            list-style: none;
+        }
+        
+        .achievements li {
+            display: flex;
+            align-items: flex-start;
+            gap: 0.75rem;
+            margin-bottom: 0.5rem;
+            color: #374151;
+        }
+        
+        .achievements li::before {
+            content: '';
+            width: 6px;
+            height: 6px;
+            background: #2563eb;
+            border-radius: 50%;
+            margin-top: 0.5rem;
+            flex-shrink: 0;
+        }
+        
+        /* Skills Section */
+        .skills {
+            background: #f8fafc;
+            padding: 5rem 0;
+        }
+        
+        .skills-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 1.5rem;
+        }
+        
+        .skill-card {
+            background: white;
+            border: 1px solid #e2e8f0;
+            border-radius: 0.5rem;
+            padding: 1.5rem;
+            transition: box-shadow 0.2s;
+        }
+        
+        .skill-card:hover {
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+        }
+        
+        .skill-title {
+            font-size: 1.125rem;
+            font-weight: 600;
+            color: #0f172a;
+            margin-bottom: 1rem;
+        }
+        
+        .skill-tags {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 0.5rem;
+        }
+        
+        .skill-tag {
+            background: transparent;
+            color: #374151;
+            border: 1px solid #d1d5db;
+            padding: 0.25rem 0.75rem;
+            border-radius: 0.375rem;
+            font-size: 0.75rem;
+        }
+        
+        /* Education Section */
+        .about {
+            background: white;
+            padding: 5rem 0;
+        }
+        
+        .about-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
+            gap: 3rem;
+        }
+        
+        .about-card {
+            background: white;
+            border: 1px solid #e2e8f0;
+            border-radius: 0.5rem;
+            padding: 1.5rem;
+        }
+        
+        .about-card h3 {
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+            font-size: 1.125rem;
+            font-weight: 600;
+            color: #0f172a;
+            margin-bottom: 1.5rem;
+        }
+        
+        .education-item, .interest-item {
+            margin-bottom: 1.5rem;
+        }
+        
+        .education-item:not(:last-child), .interest-item:not(:last-child) {
+            border-bottom: 1px solid #e2e8f0;
+            padding-bottom: 1.5rem;
+        }
+        
+        .education-title, .interest-title {
+            font-weight: 600;
+            color: #0f172a;
+            margin-bottom: 0.5rem;
+        }
+        
+        .education-school, .interest-description {
+            color: #475569;
+            margin-bottom: 0.25rem;
+        }
+        
+        .education-date {
+            font-size: 0.875rem;
+            color: #64748b;
+        }
+        
+        .interest-title {
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+        }
+        
+        /* Contact Section */
+        .contact {
+            background: linear-gradient(to right, #2563eb, #4f46e5);
+            padding: 5rem 0;
+            color: white;
+            text-align: center;
+        }
+        
+        .contact h2 {
+            font-size: 1.875rem;
+            font-weight: 700;
+            margin-bottom: 1.5rem;
+        }
+        
+        .contact p {
+            font-size: 1.25rem;
+            color: #bfdbfe;
+            margin-bottom: 1.5rem;
+        }
+        
+        .btn-secondary {
+            background: white;
+            color: #2563eb;
+        }
+        
+        .btn-secondary:hover {
+            background: #eff6ff;
+        }
+        
+        /* Icons */
+        .icon {
+            width: 16px;
+            height: 16px;
+            stroke: currentColor;
+            fill: none;
+            stroke-width: 2;
+        }
+        
+        /* Responsive */
+        @media (max-width: 768px) {
+            .hero h1 {
+                font-size: 2rem;
+            }
+            
+            .hero .subtitle {
+                font-size: 1.25rem;
+            }
+            
+            .experience-header {
+                flex-direction: column;
+                gap: 0.5rem;
+            }
+            
+            .experience-meta {
+                flex-direction: column;
+                gap: 0.5rem;
+            }
+            
+            .about-grid {
+                grid-template-columns: 1fr;
+            }
+            
+            .skills-grid {
+                grid-template-columns: 1fr;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- Hero Section -->
+    <section class="hero">
+        <div class="container">
+            <div class="hero-content">
+                <h1>Alex Daly</h1>
+                <p class="subtitle">Product Leader & Analytics Expert</p>
+                <div class="location">
+                    <svg class="icon" viewBox="0 0 24 24">
+                        <path d="M20 10c0 6-8 12-8 12s-8-6-8-12a8 8 0 0 1 16 0Z"/>
+                        <circle cx="12" cy="10" r="3"/>
+                    </svg>
+                    <span>Boston, MA</span>
+                </div>
+                
+                <div class="badges">
+                    <div class="badge">
+                        <svg class="icon" viewBox="0 0 24 24">
+                            <path d="m3 3 7.07 16.97 2.51-7.39 7.39-2.51L3 3z"/>
+                            <path d="m13 13 6 6"/>
+                        </svg>
+                        170x Growth Leader
+                    </div>
+                    <div class="badge">
+                        <svg class="icon" viewBox="0 0 24 24">
+                            <path d="M16 21v-2a4 4 0 0 0-4-4H6a4 4 0 0 0-4 4v2"/>
+                            <circle cx="9" cy="7" r="4"/>
+                            <path d="m22 21-3-3 3-3"/>
+                        </svg>
+                        Team Builder
+                    </div>
+                    <div class="badge">
+                        <svg class="icon" viewBox="0 0 24 24">
+                            <path d="M12 5a3 3 0 1 0-5.997.125 4 4 0 0 0-2.526 5.77 4 4 0 0 0 .556 6.588A4 4 0 1 0 12 18Z"/>
+                            <path d="M12 5a3 3 0 1 1 5.997.125 4 4 0 0 1 2.526 5.77 4 4 0 0 1-.556 6.588A4 4 0 1 1 12 18Z"/>
+                            <path d="M15 13a4.5 4.5 0 0 1-3-4 4.5 4.5 0 0 1-3 4"/>
+                            <path d="M17.599 6.5a3 3 0 0 0 .399-1.375"/>
+                            <path d="M6.003 5.125A3 3 0 0 0 6.401 6.5"/>
+                            <path d="M3.477 10.896a4 4 0 0 1 .585-.396"/>
+                            <path d="M19.938 10.5a4 4 0 0 1 .585.396"/>
+                            <path d="M6 18a4 4 0 0 1-1.967-.516"/>
+                            <path d="M19.967 17.484A4 4 0 0 1 18 18"/>
+                        </svg>
+                        AI Product Expert
+                    </div>
+                </div>
+
+                <p class="hero-description">
+                    Experienced product leader with 15+ years driving growth through analytics, 
+                    automation, and AI. Proven track record of scaling teams and products from 
+                    startups to public companies.
+                </p>
+
+                <div class="hero-buttons">
+                    <a href="mailto:alex@example.com" class="btn btn-primary">
+                        <svg class="icon" viewBox="0 0 24 24">
+                            <rect width="20" height="16" x="2" y="4" rx="2"/>
+                            <path d="m22 7-10 5L2 7"/>
+                        </svg>
+                        Get In Touch
+                    </a>
+                    <a href="#" class="btn btn-outline">
+                        <svg class="icon" viewBox="0 0 24 24">
+                            <path d="m7 7 10 10-5 1z"/>
+                            <path d="m6 10 2 10 3-3"/>
+                        </svg>
+                        View Resume
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Experience Section -->
+    <section class="experience">
+        <div class="container">
+            <div class="section-header">
+                <h2 class="section-title">Professional Experience</h2>
+                <p class="section-description">A journey of product leadership and analytical excellence</p>
+            </div>
+
+            <div class="experience-list">
+                <div class="experience-card">
+                    <div class="experience-header">
+                        <div>
+                            <div class="experience-title">Product Lead, Core Platform, Head of Analytics</div>
+                            <div class="experience-meta">
+                                <div>
+                                    <svg class="icon" viewBox="0 0 24 24">
+                                        <path d="M3 21h18"/>
+                                        <path d="M5 21V7l8-4v18"/>
+                                        <path d="M19 21V11l-6-4"/>
+                                    </svg>
+                                    <span class="company">Quantic.edu</span>
+                                </div>
+                                <div>
+                                    <svg class="icon" viewBox="0 0 24 24">
+                                        <path d="M20 10c0 6-8 12-8 12s-8-6-8-12a8 8 0 0 1 16 0Z"/>
+                                        <circle cx="12" cy="10" r="3"/>
+                                    </svg>
+                                    <span>Boston, MA</span>
+                                </div>
+                                <div>
+                                    <svg class="icon" viewBox="0 0 24 24">
+                                        <path d="M8 2v4"/>
+                                        <path d="m16 2v4"/>
+                                        <rect width="18" height="18" x="3" y="4" rx="2"/>
+                                        <path d="M3 10h18"/>
+                                    </svg>
+                                    <span>April 2021 – Present</span>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="experience-type">Current Role</div>
+                    </div>
+                    <ul class="achievements">
+                        <li>Second in command of engineering teams, behind only CTO/Co-founder</li>
+                        <li>Launched new university (Valar) and new degrees: MBA, EMBA, MSBA, MSSE</li>
+                        <li>Integrated Customerio and Twilio with 400+ automated lifecycle campaigns</li>
+                        <li>Built BI platform with postgres + redshift funneling into snowflake via dbt</li>
+                        <li>Built AI products: Explain this Concept, Review this Lesson, Voice Coach</li>
+                    </ul>
+                </div>
+
+                <div class="experience-card">
+                    <div class="experience-header">
+                        <div>
+                            <div class="experience-title">Director of Product Management, Growth/Marketing</div>
+                            <div class="experience-meta">
+                                <div>
+                                    <svg class="icon" viewBox="0 0 24 24">
+                                        <path d="M3 21h18"/>
+                                        <path d="M5 21V7l8-4v18"/>
+                                        <path d="M19 21V11l-6-4"/>
+                                    </svg>
+                                    <span class="company">American Well (Amwell)</span>
+                                </div>
+                                <div>
+                                    <svg class="icon" viewBox="0 0 24 24">
+                                        <path d="M20 10c0 6-8 12-8 12s-8-6-8-12a8 8 0 0 1 16 0Z"/>
+                                        <circle cx="12" cy="10" r="3"/>
+                                    </svg>
+                                    <span>Boston, MA</span>
+                                </div>
+                                <div>
+                                    <svg class="icon" viewBox="0 0 24 24">
+                                        <path d="M8 2v4"/>
+                                        <path d="m16 2v4"/>
+                                        <rect width="18" height="18" x="3" y="4" rx="2"/>
+                                        <path d="M3 10h18"/>
+                                    </svg>
+                                    <span>August 2015 – April 2021</span>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="experience-type secondary">Growth Leader</div>
+                    </div>
+                    <ul class="achievements">
+                        <li>Consumer enrollments grew from 29,000 to ~5M (170x growth)</li>
+                        <li>Scaled provider network from 5,000 to 55,000 providers in 3 weeks during COVID</li>
+                        <li>Established center of excellence for A/B testing across company</li>
+                        <li>Transformed marketing budget allocation with full funnel attribution</li>
+                    </ul>
+                </div>
+
+                <div class="experience-card">
+                    <div class="experience-header">
+                        <div>
+                            <div class="experience-title">Director of Analytics</div>
+                            <div class="experience-meta">
+                                <div>
+                                    <svg class="icon" viewBox="0 0 24 24">
+                                        <path d="M3 21h18"/>
+                                        <path d="M5 21V7l8-4v18"/>
+                                        <path d="M19 21V11l-6-4"/>
+                                    </svg>
+                                    <span class="company">Fiksu</span>
+                                </div>
+                                <div>
+                                    <svg class="icon" viewBox="0 0 24 24">
+                                        <path d="M20 10c0 6-8 12-8 12s-8-6-8-12a8 8 0 0 1 16 0Z"/>
+                                        <circle cx="12" cy="10" r="3"/>
+                                    </svg>
+                                    <span>Boston, MA</span>
+                                </div>
+                                <div>
+                                    <svg class="icon" viewBox="0 0 24 24">
+                                        <path d="M8 2v4"/>
+                                        <path d="m16 2v4"/>
+                                        <rect width="18" height="18" x="3" y="4" rx="2"/>
+                                        <path d="M3 10h18"/>
+                                    </svg>
+                                    <span>September 2012 – August 2015</span>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="experience-type secondary">Team Builder</div>
+                    </div>
+                    <ul class="achievements">
+                        <li>Led three teams, hiring and developing 11 employees</li>
+                        <li>Built business intelligence function from ground up</li>
+                        <li>Defined company policy for bidding and budgeting optimization</li>
+                        <li>Presented analytics roadmap to CEO and external clients</li>
+                    </ul>
+                </div>
+
+                <div class="experience-card">
+                    <div class="experience-header">
+                        <div>
+                            <div class="experience-title">Sr. Analyst, Retention & Pricing</div>
+                            <div class="experience-meta">
+                                <div>
+                                    <svg class="icon" viewBox="0 0 24 24">
+                                        <path d="M3 21h18"/>
+                                        <path d="M5 21V7l8-4v18"/>
+                                        <path d="M19 21V11l-6-4"/>
+                                    </svg>
+                                    <span class="company">Wayfair</span>
+                                </div>
+                                <div>
+                                    <svg class="icon" viewBox="0 0 24 24">
+                                        <path d="M20 10c0 6-8 12-8 12s-8-6-8-12a8 8 0 0 1 16 0Z"/>
+                                        <circle cx="12" cy="10" r="3"/>
+                                    </svg>
+                                    <span>Boston, MA</span>
+                                </div>
+                                <div>
+                                    <svg class="icon" viewBox="0 0 24 24">
+                                        <path d="M8 2v4"/>
+                                        <path d="m16 2v4"/>
+                                        <rect width="18" height="18" x="3" y="4" rx="2"/>
+                                        <path d="M3 10h18"/>
+                                    </svg>
+                                    <span>October 2010 – September 2012</span>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="experience-type secondary">Optimization Expert</div>
+                    </div>
+                    <ul class="achievements">
+                        <li>Ran over 300 A/B tests on email and pricing</li>
+                        <li>Improved company-wide gross profit margin by 2 percentage points</li>
+                        <li>Wrote recommendation and pricing algorithms</li>
+                        <li>Became marketing team's SQL expert, improved query performance by 99%</li>
+                    </ul>
+                </div>
+
+                <div class="experience-card">
+                    <div class="experience-header">
+                        <div>
+                            <div class="experience-title">Operations Analyst</div>
+                            <div class="experience-meta">
+                                <div>
+                                    <svg class="icon" viewBox="0 0 24 24">
+                                        <path d="M3 21h18"/>
+                                        <path d="M5 21V7l8-4v18"/>
+                                        <path d="M19 21V11l-6-4"/>
+                                    </svg>
+                                    <span class="company">Capital One</span>
+                                </div>
+                                <div>
+                                    <svg class="icon" viewBox="0 0 24 24">
+                                        <path d="M20 10c0 6-8 12-8 12s-8-6-8-12a8 8 0 0 1 16 0Z"/>
+                                        <circle cx="12" cy="10" r="3"/>
+                                    </svg>
+                                    <span>Richmond, VA</span>
+                                </div>
+                                <div>
+                                    <svg class="icon" viewBox="0 0 24 24">
+                                        <path d="M8 2v4"/>
+                                        <path d="m16 2v4"/>
+                                        <rect width="18" height="18" x="3" y="4" rx="2"/>
+                                        <path d="M3 10h18"/>
+                                    </svg>
+                                    <span>February 2008 – April 2010</span>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="experience-type secondary">Performance Optimizer</div>
+                    </div>
+                    <ul class="achievements">
+                        <li>Improved international call center performance</li>
+                        <li>Built dashboards and incentive programs</li>
+                        <li>NPS went from 4th quartile to top quartile in US Banks</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Skills Section -->
+    <section class="skills">
+        <div class="container">
+            <div class="section-header">
+                <h2 class="section-title">Skills & Expertise</h2>
+                <p class="section-description">Core competencies across product, analytics, and leadership</p>
+            </div>
+
+            <div class="skills-grid">
+                <div class="skill-card">
+                    <div class="skill-title">Product Management</div>
+                    <div class="skill-tags">
+                        <span class="skill-tag">Product Strategy</span>
+                        <span class="skill-tag">Roadmap Planning</span>
+                        <span class="skill-tag">Team Leadership</span>
+                        <span class="skill-tag">Stakeholder Management</span>
+                    </div>
+                </div>
+
+                <div class="skill-card">
+                    <div class="skill-title">Analytics & BI</div>
+                    <div class="skill-tags">
+                        <span class="skill-tag">SQL</span>
+                        <span class="skill-tag">Tableau</span>
+                        <span class="skill-tag">Metabase</span>
+                        <span class="skill-tag">Snowflake</span>
+                        <span class="skill-tag">dbt</span>
+                        <span class="skill-tag">A/B Testing</span>
+                    </div>
+                </div>
+
+                <div class="skill-card">
+                    <div class="skill-title">Marketing Technology</div>
+                    <div class="skill-tags">
+                        <span class="skill-tag">Customer.io</span>
+                        <span class="skill-tag">Twilio</span>
+                        <span class="skill-tag">Attribution Modeling</span>
+                        <span class="skill-tag">Lifecycle Campaigns</span>
+                    </div>
+                </div>
+
+                <div class="skill-card">
+                    <div class="skill-title">AI & Machine Learning</div>
+                    <div class="skill-tags">
+                        <span class="skill-tag">AI Product Development</span>
+                        <span class="skill-tag">Algorithm Design</span>
+                        <span class="skill-tag">Concept Analysis</span>
+                        <span class="skill-tag">Voice Technology</span>
+                    </div>
+                </div>
+
+                <div class="skill-card">
+                    <div class="skill-title">Technical Skills</div>
+                    <div class="skill-tags">
+                        <span class="skill-tag">Python</span>
+                        <span class="skill-tag">Postgres</span>
+                        <span class="skill-tag">Redshift</span>
+                        <span class="skill-tag">Data Warehousing</span>
+                        <span class="skill-tag">API Integration</span>
+                    </div>
+                </div>
+
+                <div class="skill-card">
+                    <div class="skill-title">Leadership</div>
+                    <div class="skill-tags">
+                        <span class="skill-tag">Team Building</span>
+                        <span class="skill-tag">Hiring</span>
+                        <span class="skill-tag">Training</span>
+                        <span class="skill-tag">Strategic Planning</span>
+                        <span class="skill-tag">C-Suite Communication</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Education & Personal Section -->
+    <section class="about">
+        <div class="container">
+            <div class="about-grid">
+                <div class="about-card">
+                    <h3>
+                        <svg class="icon" viewBox="0 0 24 24">
+                            <path d="M22 10v6M2 10l10-5 10 5-10 5z"/>
+                            <path d="M6 12v5c3 3 9 3 12 0v-5"/>
+                        </svg>
+                        Education
+                    </h3>
+                    <div class="education-item">
+                        <div class="education-title">Master in Computer Science</div>
+                        <div class="education-school">University of Colorado, Boulder</div>
+                        <div class="education-date">Expected December 2025</div>
+                    </div>
+                    <div class="education-item">
+                        <div class="education-title">Bachelor in Physics, cum laude</div>
+                        <div class="education-school">University of Florida, Gainesville</div>
+                        <div class="education-date">December 2007</div>
+                    </div>
+                </div>
+
+                <div class="about-card">
+                    <h3>
+                        <svg class="icon" viewBox="0 0 24 24">
+                            <path d="M22 12h-2.48a2 2 0 0 0-1.93 2.52l.15.68a2 2 0 0 1-1.92 2.56h-.38a2 2 0 0 0-1.92 2.56l.15.68a2 2 0 0 1-1.92 2.56H9.83a2 2 0 0 1-1.92-2.56l.15-.68A2 2 0 0 0 6.14 17H2"/>
+                            <path d="M9 12V6.5a1.5 1.5 0 0 1 3 0V12"/>
+                            <path d="M12 12V6.5a1.5 1.5 0 0 1 3 0V12"/>
+                            <path d="M15 12V6.5a1.5 1.5 0 0 1 3 0V12"/>
+                        </svg>
+                        Personal Interests
+                    </h3>
+                    <div class="interest-item">
+                        <div class="interest-title">
+                            <svg class="icon" viewBox="0 0 24 24">
+                                <path d="M2 3h6a4 4 0 0 1 4 4v14a3 3 0 0 0-3-3H2z"/>
+                                <path d="M22 3h-6a4 4 0 0 0-4 4v14a3 3 0 0 1 3-3h7z"/>
+                            </svg>
+                            Teaching
+                        </div>
+                        <div class="interest-description">
+                            Instructor at General Assembly, teaching Excel, SQL, and Tableau 
+                            in Data Analytics courses to new professionals.
+                        </div>
+                    </div>
+                    <div class="interest-item">
+                        <div class="interest-title">
+                            <svg class="icon" viewBox="0 0 24 24">
+                                <path d="M22 12h-2.48a2 2 0 0 0-1.93 2.52l.15.68a2 2 0 0 1-1.92 2.56h-.38a2 2 0 0 0-1.92 2.56l.15.68a2 2 0 0 1-1.92 2.56H9.83a2 2 0 0 1-1.92-2.56l.15-.68A2 2 0 0 0 6.14 17H2"/>
+                                <path d="M9 12V6.5a1.5 1.5 0 0 1 3 0V12"/>
+                                <path d="M12 12V6.5a1.5 1.5 0 0 1 3 0V12"/>
+                                <path d="M15 12V6.5a1.5 1.5 0 0 1 3 0V12"/>
+                            </svg>
+                            Marathon Running
+                        </div>
+                        <div class="interest-description">
+                            Marathon runner since 2019, with first marathon completed 
+                            in Reykjavik, Iceland.
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- About This Site Section -->
+    <section class="about-site" style="background: #f1f5f9; padding: 5rem 0;">
+        <div class="container">
+            <div class="section-header">
+                <h2 class="section-title">About this site</h2>
+            </div>
+            
+            <div class="about-site-content" style="max-width: 48rem; margin: 0 auto; text-align: center;">
+                <p style="font-size: 1.125rem; color: #475569; line-height: 1.75; margin-bottom: 1.5rem;">
+                    This site was designed by <strong>AI</strong>, inspired by my resume, and is self-hosted on an old MacBook Pro (circa 2011) running nginx in a docker container.
+                </p>
+                <p style="font-size: 1.125rem; color: #475569; line-height: 1.75; margin-bottom: 1.5rem;">
+                    I was inspired to self-host when taking linux networking classes, and achieved this through a static IP reservation on the router with NAT forwarding.
+                </p>
+                <p style="font-size: 1.125rem; color: #475569; line-height: 1.75;">
+                    Lovable originally wanted to make this a react site, but a static html can be served <strong>20x faster</strong>, and who in the world needs a portfolio site to be dynamically generated on the fly.
+                </p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section class="contact">
+        <div class="container">
+            <h2>Let's Connect</h2>
+            <p>
+                Interested in discussing product strategy, analytics, or AI? 
+                I'd love to hear from you.
+            </p>
+            <a href="mailto:alex@example.com" class="btn btn-secondary">
+                <svg class="icon" viewBox="0 0 24 24">
+                    <rect width="20" height="16" x="2" y="4" rx="2"/>
+                    <path d="m22 7-10 5L2 7"/>
+                </svg>
+                Get In Touch
+            </a>
+        </div>
+    </section>
+</body>
+</html>

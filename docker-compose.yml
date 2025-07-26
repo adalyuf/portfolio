@@ -1,0 +1,7 @@
+services:
+  nginx:
+    image: ubuntu/nginx
+    ports:
+      - 8080:80
+    volumes:
+      - ./content/:/var/www/html
