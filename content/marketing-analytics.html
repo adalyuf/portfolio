@@ -1,0 +1,363 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Your Next Director of Marketing and Analytics</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+            line-height: 1.6;
+            color: #1e293b;
+            background: linear-gradient(135deg, #1e40af 0%, #3b82f6 50%, #60a5fa 100%);
+            min-height: 100vh;
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 1rem;
+        }
+
+        /* Hero Section */
+        .hero {
+            padding: 5rem 0;
+            text-align: center;
+            color: white;
+            min-height: 100vh;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+        }
+
+        .hero-content {
+            max-width: 800px;
+            margin: 0 auto;
+        }
+
+        .hero h1 {
+            font-size: 3rem;
+            font-weight: 700;
+            margin-bottom: 1.5rem;
+            text-shadow: 0 2px 4px rgba(0,0,0,0.1);
+        }
+
+        .hero .subtitle {
+            font-size: 1.25rem;
+            margin-bottom: 2rem;
+            opacity: 0.9;
+        }
+
+        .headshot {
+            width: 200px;
+            height: 200px;
+            border-radius: 50%;
+            object-fit: cover;
+            margin: 2rem auto;
+            border: 4px solid rgba(255,255,255,0.2);
+            box-shadow: 0 10px 30px rgba(0,0,0,0.2);
+        }
+
+        .cta-button {
+            display: inline-block;
+            background: white;
+            color: #1e40af;
+            padding: 1rem 2rem;
+            border-radius: 0.5rem;
+            text-decoration: none;
+            font-weight: 600;
+            font-size: 1.1rem;
+            transition: all 0.3s ease;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+        }
+
+        .cta-button:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 8px 25px rgba(0,0,0,0.2);
+        }
+
+        /* Content Sections */
+        .content-section {
+            background: white;
+            padding: 5rem 0;
+        }
+
+        .section-title {
+            text-align: center;
+            margin-bottom: 4rem;
+        }
+
+        .section-title h2 {
+            font-size: 2.5rem;
+            font-weight: 700;
+            margin-bottom: 1rem;
+        }
+
+        .section-title .highlight {
+            background: linear-gradient(135deg, #1e40af, #3b82f6);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+        }
+
+        .section-title .divider {
+            width: 6rem;
+            height: 4px;
+            background: linear-gradient(135deg, #1e40af, #3b82f6);
+            margin: 0 auto;
+            border-radius: 2px;
+        }
+
+        /* Experience Grid */
+        .experience-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 2rem;
+            margin-top: 3rem;
+        }
+
+        .alternate-grid {
+            display: grid;
+            grid-template-columns: repeat(2, minmax(300px, 1fr));
+            gap: 2rem;
+            margin-top: 3rem;
+        }
+
+        .experience-card {
+            background: white;
+            border-radius: 0.75rem;
+            padding: 2rem;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+            transition: all 0.3s ease;
+            border: 1px solid #e2e8f0;
+        }
+
+        .experience-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 10px 30px rgba(0,0,0,0.15);
+        }
+
+        .card-icon {
+            width: 3rem;
+            height: 3rem;
+            background: linear-gradient(135deg, #1e40af, #3b82f6);
+            border-radius: 0.75rem;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin-bottom: 1.5rem;
+        }
+
+        .card-icon img {
+            width: 2rem;
+            height: 2rem;
+            object-fit: contain;
+        }
+
+        .experience-card h3 {
+            font-size: 1.5rem;
+            font-weight: 700;
+            margin-bottom: 1rem;
+            color: #1e293b;
+        }
+
+        .experience-card p {
+            color: #64748b;
+            line-height: 1.7;
+        }
+
+        /* CTA Section */
+        .cta-section {
+            background: linear-gradient(135deg, #1e40af 0%, #3b82f6 50%, #60a5fa 100%);
+            color: white;
+            padding: 5rem 0;
+            text-align: center;
+        }
+
+        .cta-section h2 {
+            font-size: 2.5rem;
+            font-weight: 700;
+            margin-bottom: 1.5rem;
+        }
+
+        .cta-section p {
+            font-size: 1.25rem;
+            margin-bottom: 2rem;
+            opacity: 0.9;
+        }
+
+        /* Responsive Design */
+        @media (max-width: 768px) {
+            .hero h1 {
+                font-size: 2rem;
+            }
+
+            .hero .subtitle {
+                font-size: 1.1rem;
+            }
+
+            .section-title h2 {
+                font-size: 2rem;
+            }
+
+            .experience-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .headshot {
+                width: 150px;
+                height: 150px;
+            }
+
+            .container {
+                padding: 0 1rem;
+            }
+        }
+
+        @media (max-width: 480px) {
+            .hero {
+                padding: 3rem 0;
+            }
+
+            .content-section {
+                padding: 3rem 0;
+            }
+
+            .cta-section {
+                padding: 3rem 0;
+            }
+
+            .experience-card {
+                padding: 1.5rem;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- Hero Section -->
+    <section class="hero">
+        <div class="container">
+            <div class="hero-content">
+                <h1>Your next Director of Marketing and Analytics</h1>
+                <p class="subtitle">
+                    You know your industry, you know your customer.<br><br>If only you had someone on your team who understood all the arcane marketing technologies and how to make them play nicely together in a way that accelerates your growth, gives visibility into your success to upper management, and does so in a safe and compliant way.
+                </p>
+                <img src="headshot.jpg" alt="Hero image" class="headshot">
+                <p class="subtitle" style="font-size: 1.5rem; font-weight: 600;">That person - is me.</p>
+                <a href="https://www.linkedin.com/in/alex-daly-ab7bb723/" class="cta-button">Let's Work Together</a>
+            </div>
+        </div>
+    </section>
+
+
+    
+    <!-- Marketing Analytics Section -->
+    <section class="content-section">
+        <div class="container">
+            <div class="section-title">
+                <h2>What I have done in <span class="highlight">Marketing Analytics</span></h2>
+                <div class="divider"></div>
+            </div>
+            <div class="experience-grid">
+                <div class="experience-card">
+                    <div class="card-icon">
+                        <img src="analytics-icon.jpg" alt="Privacy">
+                    </div>
+                    <h3>Tagging</h3>
+                    <p>Managed around 30 client's google tag manager accounts simultaneously, helping define their tagging strategy, implementing on web myself, and project managing mobile implementations.</p>
+                </div>
+                <div class="experience-card">
+                    <div class="card-icon">
+                        <img src="integration-icon.jpg" alt="Data Pipelines">
+                    </div>
+                    <h3>Data Pipelines</h3>
+                    <p>Built pipelines that went through Segment and mParticle as a single source of truth, allowing customer to easily add new marketing vendors.</p>
+                </div>
+                <div class="experience-card">
+                    <div class="card-icon">
+                        <img src="analytics-icon.jpg" alt="Privacy">
+                    </div>
+                    <h3>Privacy</h3>
+                    <p>Implemented OneTrust consent management platform in front of Segment to collect consent in a GDPR compliant manner before sending data to downstream services.</p>
+                </div>
+                <div class="experience-card">
+                    <div class="card-icon">
+                        <img src="integration-icon.jpg" alt="Data Warehousing">
+                    </div>
+                    <h3>Data Warehousing</h3>
+                    <p>Hooked up Snowflake with data from Customerio, Hubspot, SurveyMonkey, Google Ads, Facebook, and matched spend data with campaign performance.</p>
+                </div>
+                <div class="experience-card">
+                    <div class="card-icon">
+                        <img src="analytics-icon.jpg" alt="Data Visualization">
+                    </div>
+                    <h3>Data Visualization</h3>
+                    <p>Built dashboards in Tableau Online, Looker, Metabase, and Sigma, using data from data warehouse and trained each team in company on how to use it to find their KPIs.</p>
+                </div>
+                <div class="experience-card">
+                    <div class="card-icon">
+                        <img src="integration-icon.jpg" alt="A/B Testing">
+                    </div>
+                    <h3>A/B Testing</h3>
+                    <p>I am passionate about A/B testing and have set up a center of excellence at each company, helping to train each marketing function on how to run these and expanding to engineering teams and executives to convince the company to conduct larger and more impactful tests.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Marketing Section -->
+    <section class="content-section" style="background: #f8fafc;">
+        <div class="container">
+            <div class="section-title">
+                <h2>What I have done in <span class="highlight">Marketing</span> more broadly</h2>
+                <div class="divider"></div>
+            </div>
+            <div class="alternate-grid">
+                <div class="experience-card">
+                    <div class="card-icon">
+                        <img src="analytics-icon.jpg" alt="Email">
+                    </div>
+                    <h3>Email</h3>
+                    <p>Ran email marketing for Wayfair during a rebrand from CSNStores. Executed over 300 A/B tests, including copy, product selection, imagery, and pricing. Solved severe deliverability hit from being blacklisted by gmail.</p>
+                </div>
+                <div class="experience-card">
+                    <div class="card-icon">
+                        <img src="integration-icon.jpg" alt="Pricing">
+                    </div>
+                    <h3>Pricing</h3>
+                    <p>Ran competitive pricing algorithms for Wayfair. Used data from web crawls of competitors, internal sales and margin data, and volume of inventory and age of inventory to dynamically price a 1 million plus item catalog.</p>
+                </div>
+                <div class="experience-card">
+                    <div class="card-icon">
+                        <img src="analytics-icon.jpg" alt="SEO">
+                    </div>
+                    <h3>SEO / Website Product Management</h3>
+                    <p>Built and scaled a team building consumer websites for telehealth, built databases of content to rank for SEO including services, conditions, blog articles, and over 1 million doctor profiles. Advised other healthcare companies on best practices, including SEO, conversion rate optimization, page speed, and accessibility.</p>
+                </div>
+                <div class="experience-card">
+                    <div class="card-icon">
+                        <img src="integration-icon.jpg" alt="Paid Advertising">
+                    </div>
+                    <h3>Paid Advertising</h3>
+                    <p>Managed marketing campaigns for 30 different clients, primarily mobile apps. Every campaign was optimized against customer lifetime value and had multiple tests running at all times. First beta client of Facebook Mobile App Install ad units, other key channels included Google Ads, Chartboost. Unique clients saw success with LinkedIn or even direct mail.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- CTA Section -->
+    <section class="cta-section" id="contact">
+        <div class="container">
+            <h2>Ready to accelerate your growth?</h2>
+            <p>Let's discuss how I can help transform your marketing analytics and drive measurable results for your business.</p>
+            <a href="https://www.linkedin.com/in/alex-daly-ab7bb723/" class="cta-button">Get In Touch</a>
+        </div>
+    </section>
+</body>
+</html>
